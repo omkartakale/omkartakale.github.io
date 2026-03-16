@@ -18,25 +18,38 @@ const Contact = () => {
     setForm({ ...form, [name]: value });
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    setLoading(true); // Show loading state
+    setLoading(true);
 
-    try {
-      await emailjs.sendForm(
-        import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
-        import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
-        formRef.current,
-        import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
+    emailjs
+      .send(
+        "service_mi2b4z8",
+        "template_f515n7p",
+        {
+          from_name: form.name,
+          from_email: form.email,
+          message: form.message,
+        },
+        "kwZCtuo0FYb87PAL5"
+      )
+      .then(
+        () => {
+          setLoading(false);
+          alert("Message sent successfully!");
+
+          setForm({
+            name: "",
+            email: "",
+            message: "",
+          });
+        },
+        (error) => {
+          setLoading(false);
+          console.log(error);
+          alert("Failed to send message.");
+        }
       );
-
-      // Reset form and stop loading
-      setForm({ name: "", email: "", message: "" });
-    } catch (error) {
-      console.error("EmailJS Error:", error); // Optional: show toast
-    } finally {
-      setLoading(false); // Always stop loading, even on error
-    }
   };
 
   return (

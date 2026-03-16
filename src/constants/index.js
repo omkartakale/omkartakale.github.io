@@ -29,7 +29,7 @@ const words = [
 ];
 
 const counterItems = [
-  { value: 1, suffix: "+", label: "Years of Experience" },
+  { value: 1.10, suffix: "+", label: "Years of Experience" },
   { value: 3, suffix: "+", label: "Projects Delivered" },
   { value: 8.95, suffix: "", label: "CGPA (VIT Pune)" },
   { value: 7.5, suffix: "", label: "IELTS Band Score" },
@@ -148,7 +148,7 @@ const techStackIcons = [
 const expCards = [
   {
     review: "Omkar has been instrumental in building our real-time event delivery infrastructure. His contributions to the Global Pusher system and OMS have been outstanding.",
-    imgPath: "/images/exp1.png",
+    imgPath: "/images/xb.png",
     logoPath: "/images/logo1.png",
     title: "Software Developer — XpressBees",
     date: "July 2024 - Present",
@@ -219,18 +219,21 @@ const socialImgs = [
   {
     name: "insta",
     imgPath: "/images/insta.png",
+    url: "https://www.instagram.com/_omkar25_?igsh=MTR0MWJnd25zbGI0cQ%3D%3D&utm_source=qr",
   },
   {
-    name: "fb",
-    imgPath: "/images/fb.png",
+    name: "leetcode",
+    imgPath: "/images/leet.webp",
+    url: "https://leetcode.com/u/omkarT25/",
   },
   {
-    name: "x",
-    imgPath: "/images/x.png",
+    name: "git",
+    imgPath: "/images/git.png",
   },
   {
     name: "linkedin",
     imgPath: "/images/linkedin.png",
+    url: "https://www.linkedin.com/in/omkar-takale-7a56bb1b9/",
   },
 ];
 
